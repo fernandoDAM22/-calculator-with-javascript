@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caculator</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js"></script>
+</head>
+<body id="body-id">
+<!-- Div whit options buttons -->
+    <div class="options">
+        <div class="btn-options" id="darkMode">
+            <img src="./img/sun-solid.svg" alt=""onclick="darkMode()" id="dark-mode-img">
+        </div>
+        <div class="btn-options" id="screen-color" onclick="screenColor()">
+            <img src="./img/display-solid.svg" alt="">
+        </div>
+        <div class="btn-options" id="screen-plus" onclick="screenPlus()">
+            <img src="./img/plus-solid.svg" alt="">
+        </div>
+        <div class="btn-options" id="screen-subtraction" onclick="screenSubtraction()">
+            <img src="./img/minus-solid.svg" alt="">
+        </div>
+        <div class="btn-options" onclick="numPlus()" id="num_plus">
+            <img src="./img/arrow-up-1-9-solid.svg" alt="">
+        </div>
+        <div class="btn-options" onclick="numSubtraction()" id="num_subtraction">
+            <img src="./img/arrow-down-9-1-solid.svg" alt="">
+        </div>
+    </div>
+    <!-- In this div is the calculator -->
+   <div class="container">
+        <div id="screen">
+            <!-- Screen: in this div we put the result whit innerHTML -->
+        </div>
+        <div class="btn-container" id="btn-container-id">
+            <input type="button" value="7" id="btn-7" class="btn" onclick="addNumber(7), printScreen()">
+            <input type="button" value="8" id="btn-8" class="btn" onclick="addNumber(8), printScreen()">
+            <input type="button" value="9" id="btn-9" class="btn" onclick="addNumber(9), printScreen()">
+            <input type="button" value="+" id="btn-addition" class="btn" onclick="addOperation('+'),printScreen()">
+        </div>
+        <div class="btn-container">
+            <input type="button" value="4" id="btn-4" class="btn" onclick="addNumber(4), printScreen()">
+            <input type="button" value="5" id="btn-5" class="btn" onclick="addNumber(5), printScreen()">
+            <input type="button" value="6" id="btn-6" class="btn" onclick="addNumber(6), printScreen()">
+            <input type="button" value="-" id="btn-subtraction" class="btn" onclick="addOperation('-'), printScreen()">
+        </div>
+        <div class="btn-container">
+            <input type="button" value="1" id="btn-1" class="btn" onclick="addNumber(1),printScreen()">
+            <input type="button" value="2" id="btn-2" class="btn" onclick="addNumber(2),printScreen()">
+            <input type="button" value="3" id="btn-3" class="btn" onclick="addNumber(3),printScreen()">
+            <input type="button" value="*" id="btn-multiplication" class="btn" onclick="addOperation('*'), printScreen()">
+        </div>
+        <div class="btn-container">
+            <input type="button" value="0" id="btn-0" class="btn" onclick="addNumber(0), printScreen(), printScreen()">
+            <input type="button" value="." id="btn-point" class="btn" onclick="addPoint(),printScreen()">
+            <input type="button" value="%" id="btn-module" class="btn" onclick="addOperation('%'), printScreen()">
+            <input type="button" value="/" id="btn-division" class="btn" onclick="addOperation('/'), printScreen()">
+        </div>
+        <div class="btn-container">
+            <input type="button" value="=" id="btn-same" class="btn" onclick="makeOperation(),printScreen()">
+            <input type="button" value="RS" id="btn-reset" class="btn" onclick="reset()">
+            <input type="button" value="AC" id="btn-division" class="btn" onclick="acumulator(),printScreen()">
+        </div>
+   </div>
+
+</body>
+</html>
