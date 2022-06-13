@@ -125,8 +125,8 @@ function screenColor(){
         screen.style.fontWeight = "600";
     }
     if(number == 3){
-        screen.style.backgroundColor = "black"
-        button.style.backgroundColor = "white"
+        screen.style.backgroundColor = "black";
+        button.style.backgroundColor = "white";
         screen.style.color = "white";
         screen.style.fontWeight = "500";
     }
@@ -139,112 +139,100 @@ function screenPlus(){
     }
     switch(screenTam){
         case 1:
-            screen.style.fontSize = "30px"
+            screen.style.fontSize = "30px";
             break;
         case 2:
-            screen.style.fontSize = "35px"
+            screen.style.fontSize = "35px";
             break;
         case 3:
-            screen.style.fontSize = "40px"
+            screen.style.fontSize = "40px";
             break;
         case 4:
-            screen.style.fontSize = "45px"
+            screen.style.fontSize = "45px";
             break;
         case 5:
-            screen.style.fontSize = "50px"
+            screen.style.fontSize = "50px";
     }
 
 }
 /**This function allows us decrease the font size of the screen */
 function screenSubtraction(){
-    let screen = document.getElementById("screen")
+    let screen = document.getElementById("screen");
     if(screenTam >= 1){
         screenTam--;
     }
     switch(screenTam){
         case 1:
-            screen.style.fontSize = "30px"
+            screen.style.fontSize = "30px";
             break;
         case 2:
-            screen.style.fontSize = "35px"
+            screen.style.fontSize = "35px";
             break;
         case 3:
-            screen.style.fontSize = "40px"
+            screen.style.fontSize = "40px";
             break;
         case 4:
-            screen.style.fontSize = "45px"
+            screen.style.fontSize = "45px";
             break;
         case 5:
-            screen.style.fontSize = "50px"
+            screen.style.fontSize = "50px";
     }
 }
 /**This function allows us increase the font size of the buttons */
 function numPlus(){
+    let tam;
     let buttons = document.getElementsByClassName('btn');
     if(numTam <= 5){
         numTam++;
     }
     switch(numTam){
         case 1:
-            for(let i = 0; i < buttons.length; i++){
-                buttons[i].style.fontSize= "40px";
-            }
+            tam = "40px";
             break;
         case 2:
-            for(let i = 0; i < buttons.length; i++){
-                buttons[i].style.fontSize = "45px";
-            }
+            tam = "45px";
             break;
         case 3:
-            for(let i = 0; i < buttons.length; i++){
-                buttons[i].style.fontSize = "50px";
-            }
+            tam = "50px";
             break;
         case 4:
-            for(let i = 0; i < buttons.length; i++){
-                buttons[i].style.fontSize = "55px";
-            }
+            tam  = "55px";
             break;
         case 5:
-            for(let i = 0; i < buttons.length; i++){
-                buttons[i].style.fontSize = "60px";
-            }
+            tam = "60px";
             break;
     }
+    buttons.forEach(element =>{
+        element.style.fontSize = tam;
+    });
 }
 /**This function allows us decrease the font size of the buttons */
 function numSubtraction(){
+    let tam;
     let buttons = document.getElementsByClassName('btn');
     if(numTam >= 1){
         numTam--;
     }
     switch(numTam){
         case 1:
-            for(let i = 0; i < buttons.length; i++){
-                buttons[i].style.fontSize= "40px";
-            }
+            tam = "40px";
             break;
         case 2:
-            for(let i = 0; i < buttons.length; i++){
-                buttons[i].style.fontSize = "45px";
-            }
+            tam = "45px" 
             break;
         case 3:
-            for(let i = 0; i < buttons.length; i++){
-                buttons[i].style.fontSize = "50px";
-            }
+            tam = "50px"
             break;
         case 4:
-            for(let i = 0; i < buttons.length; i++){
-                buttons[i].style.fontSize = "55px";
-            }
+            tam = "55px"
             break;
         case 5:
-            for(let i = 0; i < buttons.length; i++){
-                buttons[i].style.fontSize = "60px";
-            }
+            tam = "60px";
             break;
     }
+    buttons.forEach(element => {
+        element.style.fontSize = tam;
+    });
 }
 /**This function allows us make the operation */
 function makeOperation(){
